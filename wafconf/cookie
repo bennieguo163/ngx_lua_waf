@@ -1,9 +1,12 @@
 \.\./
 \:\$
 \$\{
+\<\?
+\<\%
+\s*or\s+.*=.*
 select.+(from|limit)
 (?:(union(.*?)select))
-having|rongjitest
+ having |updatexml|extractvalue
 sleep\((\s*)(\d*)(\s*)\)
 benchmark\((.*)\,(.*)\)
 base64_decode\(
@@ -18,3 +21,5 @@ xwork\.MethodAccessor
 (gopher|doc|php|glob|file|phar|zlib|ftp|ldap|dict|ogg|data)\:\/
 java\.lang
 \$_(GET|post|cookie|files|session|env|phplib|GLOBALS|SERVER)\[
+\<(iframe|script|body|img|layer|div|meta|style|base|object|input)
+(onmouseover|onmouseenter|onerror|onload)\=

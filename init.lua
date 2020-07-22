@@ -15,7 +15,7 @@ attacklog = optionIsOn(attacklog)
 CCDeny = optionIsOn(CCDeny)
 Redirect=optionIsOn(Redirect)
 function getClientIp()
-        IP  = ngx.var.remote_addr 
+        IP  = ngx.var.http_cf_connecting_ip 
         if IP == nil then
                 IP  = "unknown"
         end

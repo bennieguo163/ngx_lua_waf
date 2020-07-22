@@ -1,6 +1,6 @@
-RulePath = "/usr/local/nginx/conf/waf/wafconf/"
+RulePath = "conf/waf/wafconf/"
 attacklog = "on"
-logdir = "/usr/local/nginx/logs/hack/"
+logdir = "logs/hack/"
 UrlDeny="on"
 Redirect="on"
 CookieMatch="on"
@@ -9,37 +9,50 @@ whiteModule="on"
 black_fileExt={"php","jsp"}
 ipWhitelist={"127.0.0.1"}
 ipBlocklist={"1.0.0.1"}
-CCDeny="off"
+CCDeny="on"
 CCrate="100/60"
 html=[[
-<html xmlns="http://www.w3.org/1999/xhtml"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>网站防火墙</title>
-<style>
-p {
-	line-height:20px;
-}
-ul{ list-style-type:none;}
-li{ list-style-type:none;}
-</style>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GeekBuying - Firewall.</title>
+    <meta name="viewport" content="initial-scale=1,width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <style type="text/css">
+        *{padding: 0; margin: 0;}
+        .warp{margin-bottom: 20px;height: 680px; position: relative;}
+        .logo_img{display: block; margin: 36px auto; width: 200px; height: 48px;}
+        .foot_help{ width: 100%;text-align: center; font-size: 14px; color: #666; margin-top: 36px; position: absolute; bottom: 0; left: 0;}
+        .content{width: 1100px;height: 340px; color: #fff;  margin: 0 auto; border-radius: 8px; background: #064ea3; padding: 0 20px;}
+        .content span{ font-size: 28px;line-height: 120px; display: block;}
+        .content p{font-size: 20px; line-height:40px; text-align: left;}
+        @media only screen and (max-width: 640px) {
+            .warp{ height: 100%; margin: 0; padding-bottom: 20%;}
+            .content{width: 80%; border-radius: .375rem; height: 100%; padding:5%;}
+            .content span{font-size: 1.15rem; line-height:2rem;} 
+            .content p {font-size: .875rem; line-height:1.624rem;}
+            .foot_help{font-size:.875rem;}
+        }
+    </style>
 </head>
-
-<body style=" padding:0; margin:0; font:14px/1.5 Microsoft Yahei, 宋体,sans-serif; color:#555;">
-
- <div style="margin: 0 auto; width:1000px; padding-top:70px; overflow:hidden;">
-  
-  
-  <div style="width:600px; float:left;">
-    <div style=" height:40px; line-height:40px; color:#fff; font-size:16px; overflow:hidden; background:#6bb3f6; padding-left:20px;">网站防火墙 </div>
-    <div style="border:1px dashed #cdcece; border-top:none; font-size:14px; background:#fff; color:#555; line-height:24px; height:220px; padding:20px 20px 0 20px; overflow-y:auto;background:#f3f7f9;">
-      <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-weight:600; color:#fc4f03;">您的请求带有不合法参数，已被网站管理员设置拦截！</span></p>
-<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">可能原因：您提交的内容包含危险的攻击请求</p>
-<p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:1; text-indent:0px;">如何解决：</p>
-<ul style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;"><li style=" margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">1）检查提交内容；</li>
-<li style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2）如网站托管，请联系空间提供商；</li>
-<li style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">3）普通网站访客，请联系网站管理员；</li></ul>
+<body>
+    <div class="warp">
+        <a class="logo_img" href="https://www.geekbuying.com">
+            <img width="200" height="48" src="https://content1.geekbuying.com/V1.4/en/images/index_images/new_geekbuy.png" alt="geeklogo" />
+        </a>
+        <div class="content">
+            <span>Your request has illegal parameters and has been blocked by the webmaster.</span>
+            <p>Possible cause: your submission contains a dangerous attack request</p>
+            <p>How to solve:<br/> 
+                    1.Check the submission; <br/>
+                    2.Or contact the webmaster;
+            </p>
+        </div>
+        <div class="foot_help">
+            <p>Copyright © 2012 - 2020 GeekBuying.com. All rights reserved.</p>
+        </div>
     </div>
-  </div>
-</div>
-</body></html>
+</body>
+</html>
 ]]
