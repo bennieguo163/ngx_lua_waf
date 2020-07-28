@@ -1,1 +1,4 @@
-^/123/$
+^/Account/UploadUserAvatar
+^/dropShopping/AddDropShipping
+^/ProductReview/WriteReview
+^/item/SaveWriteReview
